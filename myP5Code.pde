@@ -1,28 +1,39 @@
+
+
 setup = function() {
-    size(400, 400);
+    size(450, 450); // Different canvas size
 };
 
-var answer = 1;
+var answer = 2;
 
 draw = function(){
-  background(100,100,100);
-  fill(0, 0, 0);
-  ellipse(200, 200, 375, 375);
-  fill(60, 0, 255);
-  triangle(200, 104, 280, 280, 120, 280);
+  background(50, 120, 150); // Different background color
+ 
+  //outer circle
+  fill(30, 30, 30);
+  ellipse(225, 225, 400, 400);
+ 
+  //diamond shape
+  fill(0, 200, 255);
+  quad(225, 130, 320, 225, 225, 320, 130, 225);
+ 
   fill(255, 255, 255);
-  
-  if (answer == 1) {
-    text("YOUR", 176, 200);
-    text("MESSAGE", 159, 229); 
+ 
+
+  if (answer === 1) {
+    text("I AM TONKA JAHARI", 175, 230);
+  } else if (answer === 2) {
+    text("BUT I WOULD NEVER", 170, 230);
+  } else if (answer === 3) {
+    text("ORDER A FULL PIZZA", 175, 230);
+  } else if (answer === 4) {
+    text("FOR MYSELF", 205, 230);
+  } else {
+    text("I MEAN ILL TAKE IT", 180, 230);
   }
-  
 };
 
+//When mouse is clicked...
 mouseClicked = function(){
-  answer = round(random(1, 5));
+  answer = round(random(1, 5)); // random() requirement
 };
-
-
-
-
