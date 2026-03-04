@@ -31,9 +31,12 @@ draw = function(){
   } else {
     text("I MEAN ILL TAKE IT", 180, 230);
   }
+  if(mousePressed){
+    text("🦈", random(0,600), random(0,400));
+  }
 };
 
 //When mouse is clicked...
 mouseClicked = function(){
-  answer = round(random(1, 5)); // random() requirement
+  answer = round(random(1, 5)); // random()
 };
